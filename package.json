@@ -1,0 +1,49 @@
+{
+  "name": "nordeste-em-dados-3d",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Nordeste em Dados 3D — Observatório da Pobreza e Desigualdade Social",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "geo:fetch": "node scripts/fetch-geo.mjs",
+    "prebuild": "node scripts/fetch-geo.mjs --if-missing",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@react-three/drei": "^10.0.0",
+    "@react-three/fiber": "^9.0.0",
+    "d3": "^7.9.0",
+    "framer-motion": "^12.0.0",
+    "lucide-react": "^0.468.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-is": "^19.0.0",
+    "recharts": "^2.15.0",
+    "three": "^0.170.0"
+  },
+  "devDependencies": {
+    "@types/d3": "^7.4.3",
+    "@types/geojson": "^7946.0.14",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/three": "^0.170.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.6.3",
+    "vite": "^6.0.0",
+    "vitest": "^2.1.8"
+  },
+  "overrides": {
+    "react-is": "^19.0.0"
+  },
+  "engines": {
+    "node": ">=18.18"
+  }
+}
